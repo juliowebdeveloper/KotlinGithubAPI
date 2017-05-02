@@ -40,7 +40,7 @@ class ServiceGenerator {
 
         var builder: Retrofit.Builder = Retrofit.Builder()
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create(gson))
                 .baseUrl(BASE_URL)
 
         var retrofit = builder.build()
